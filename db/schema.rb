@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "name"
     t.string "location"
     t.integer "costume_inventory"
-    t.integer "number_of_emplyees"
+    t.integer "num_of_emplyees"
     t.boolean "still_in_business"
-    t.integer "opening_time"
-    t.integer "closing_time"
+    t.datetime "opening_time"
+    t.datetime "closing_time"
   end
 
   create_table "costumes", force: :cascade do |t|
@@ -31,15 +31,15 @@ ActiveRecord::Schema.define(version: 3) do
     t.datetime "updated_at"
   end
 
-  create_table "haunted_house", force: :cascade do |t|
+  create_table "haunted_houses", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.string "theme"
-    t.integer "price"
+    t.float "price"
     t.boolean "family_friendly"
     t.datetime "opening_date"
     t.datetime "closing_date"
-    t.string "long_description"
+    t.string "description"
   end
 
 end
